@@ -1,0 +1,4 @@
+.menuItemList {
+    display: flex;
+    flex-direction: column;
+}

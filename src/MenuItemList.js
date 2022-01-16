@@ -1,4 +1,3 @@
-import { Grid } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
 import ItemCard from './ItemCard';
 import './MenuItemList.css';
@@ -20,18 +19,14 @@ function MenuItemList() {
 
     
     return (
-            <Grid
-                className='menuItemList'
-                container
-                direction='column'
-            >
+            <div className='menuItemList'>
                 {
                     menuItems.map((item,index) => {
                         return <ItemCard item={item}/>
                     })
 
                 }
-            </Grid>
+            </div>
     )
 }
 
