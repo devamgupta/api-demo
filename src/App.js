@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import MenuItemList from './components/MenuItemList';
 import { Provider } from 'react-redux';
-import store from './redux/store';
+import store from './app/store';
 function App() {
   
   return (
