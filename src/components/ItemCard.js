@@ -8,7 +8,7 @@ function ItemCard({ item }) {
     return (
         <div className='card'>
             <div className='card__content'>
-            <img className='foodTypeIcon' src={(item.isVegetarian=='Y')?VEG_ICON:NVEG_ICON}/>
+            <img className='foodTypeIcon' src={(item.isVegetarian==='Y')?VEG_ICON:NVEG_ICON}/>
                 <h2 className='itemName'>
                     {item.itemName}
                 </h2>
@@ -30,10 +30,10 @@ function ItemCard({ item }) {
             <div className='card__image'>
                 <img
                     className='image'
-                    src={item.image[0]}
+                    src={(item?.image?.length)? (item?.image[0]): ''}
+                    alt='NO_IMAGE'
                 />
             </div>
-            
         </div>
     )
 }

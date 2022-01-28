@@ -1,14 +1,17 @@
 import React from 'react';
 import './App.css';
-import MenuItemList from './MenuItemList';
-
+import MenuItemList from './components/MenuItemList';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 function App() {
   
   return (
-    <div className='App'>
-      <h1>API Call Demo</h1>
-      <MenuItemList />
-    </div>
+    <Provider store={store}>
+      <div className='App'>
+        <h1>API Call Demo</h1>
+        <MenuItemList />
+      </div>
+    </Provider>
   )
 }
 
