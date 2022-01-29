@@ -3,7 +3,7 @@ import ItemCard from './ItemCard';
 import './MenuItemList.css';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchMenuItems } from '../features/menuItem/menuItemSlice';
+import { fetchMenuItems } from '../redux';
 
 function MenuItemList() {
     const loading = useSelector(state => state.menuItem.loading);
