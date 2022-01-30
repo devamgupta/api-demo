@@ -11,7 +11,7 @@ export default configureStore({
   reducer: {
       menuItem: menuItemReducer
   },
-  middleware: getDefaultMiddleware => getDefaultMiddleware().concat(sagaMiddleware, logger)
+  middleware: getDefaultMiddleware => getDefaultMiddleware({thunk: false}).concat(sagaMiddleware, logger)
 })
 
 sagaMiddleware.run(rootSaga);
